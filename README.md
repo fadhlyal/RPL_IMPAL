@@ -6,4 +6,4 @@ Anggota Kelompok:
 1) Bima Andika Putra
 2) Fadhly Al-farizi - 1301201472
 3) Kian Nailaiza
-4) Muhammad Rieza Facherzi
+4) Muhammad Rieza Fachrezi - 1301204335
