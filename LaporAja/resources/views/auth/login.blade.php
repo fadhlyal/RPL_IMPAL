@@ -25,7 +25,7 @@
                                 Masuk
                             </h1>
                             <p class="d-inline">
-                                Belum punya akun? <a href="#" class="d-inline text text-decoration-none">Daftar</a>
+                                Belum punya akun? <a href="/register" class="d-inline text text-decoration-none">Daftar</a>
                             </p>
                         </div>       
         

@@ -24,7 +24,7 @@
                                 Buat akun baru.
                             </h1>
                             <p class="d-inline">
-                                Sudah punya akun? <a href="#" class="d-inline text text-decoration-none">Masuk</a>
+                                Sudah punya akun? <a href="/login" class="d-inline text text-decoration-none">Masuk</a>
                             </p>
                         </div>       
         
