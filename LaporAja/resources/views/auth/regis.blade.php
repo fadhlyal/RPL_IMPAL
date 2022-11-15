@@ -58,7 +58,7 @@
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Daftar</button>
                             </div>
                           </form>
-                            <p class="text-center">atau </p>
+                            <!-- <p class="text-center">atau </p>
                             <div class="container text-center">
                                 <div class="row justify-content-center align-item-center">
                                   <div class="col">
@@ -69,7 +69,7 @@
                                   </div>
                                 </div>
                                 
-                              </div>
+                              </div> -->
                             <!-- <a class="signin-google" href="#"> <img src="icongoogle.png" alt=""></a>
         
                             <a class="signin-fb" href="#"> <img src="iconfb.png" alt=""></a> -->

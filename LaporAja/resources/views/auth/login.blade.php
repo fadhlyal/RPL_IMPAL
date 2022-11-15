@@ -17,13 +17,11 @@
     </head>
     <body>
         <section class="login d-inline-flex p-2 bd-highlight ">
-            <div class="login-left w-50 h-100 p-6">
+            <div class="login-left w-50 h-100">
                 <div class="row justify-content-center align-item-center h-10">
                     <div class="col-6">
                         <div class="header">
-                            <h1>
-                                Masuk
-                            </h1>
+                            <h1>Masuk</h1>
                             <p class="d-inline">
                                 Belum punya akun? <a href="/register" class="d-inline text text-decoration-none">Daftar</a>
                             </p>
@@ -43,7 +41,7 @@
                             </div>
                           </form>
 
-                          <p>atau</p>
+                          <!-- <p>atau</p>
 
                             <div class="container text-center">
                                 <div class="row justify-content-center align-item-center">
@@ -55,7 +53,7 @@
                                   </div>
                                 </div>
                                 
-                              </div>
+                              </div> -->
                             <!-- <a class="signin-google" href="#"> <img src="icongoogle.png" alt=""></a>
         
                             <a class="signin-fb" href="#"> <img src="iconfb.png" alt=""></a> -->
@@ -64,7 +62,7 @@
                 </div>
             
             </div>                              
-            <div class="login-right bg-success w-50 h-100">
+            <div class="login-right w-50 h-100">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
