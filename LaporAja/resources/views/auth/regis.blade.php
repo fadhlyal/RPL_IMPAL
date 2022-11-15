@@ -76,9 +76,8 @@
                         </div>
                     </div>
                 </div>
-            
             </div>                              
-            <div class="login-right bg-success w-50 h-100">
+            <div class="login-right w-50 h-100">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">

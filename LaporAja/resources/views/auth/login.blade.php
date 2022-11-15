@@ -60,13 +60,12 @@
                         </div>
                     </div>
                 </div>
-            
             </div>                              
             <div class="login-right w-50 h-100">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="images\loginimg.png" class="d-block w-100 h-200" alt="...">
+                        <img src="images\loginimg.png" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="images\login2.jpg" class="d-block w-100" alt="...">
@@ -83,9 +82,8 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
         </section>            
-        
     </body>
 </html>
