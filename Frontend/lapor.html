@@ -15,21 +15,85 @@
         <title>LaporAja</title>
     </head>
 
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg .bg-white fixed-top" id="mainNav">
-            <div class="container">
-              <a class="navbar-brand" href="#">LAPOR AJA</a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <nav class="navbar d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none active" aria-current="page" href="#">Beranda</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Lapor</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Forum</a>
-                <a class="py-2 text-dark text-decoration-none" href="#">Kontak</a>
-              </nav>
+
+
+    <body>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled">Disabled</a>
             </div>
-          </nav>
+          </div>
+        </div>
+      </nav>
+
+      <main class="px-3">
+        <form class="row g-3">
+          <div class="col-12">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Judul">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Alamat">
+          </div>
+
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">              
+              <input type="text" class="form-control" id="validationCustom01" value="Provinsi" required>
+            </div>
+            <div class="col-md-4">              
+              <input type="text" class="form-control" id="validationCustom02" value="Kab/Kota" required>
+            </div>
+            <div class="col-md-4">              
+              <div class="input-group has-validation">                
+                <input type="text" class="form-control" id="validationCustom02" value="Kecamatan" required>
+              </div>
+            </div>
+
+
+          <div class="col-12">            
+            <input type="text" class="form-control" id="inputAddress" placeholder="Nama Pelapor">
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Deskripsi Laporan</label>
+          </div>
+          
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Kirim sebagai Anonim</label>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
+      </main>
+
+      
+
+      
+
+      
+
+          
+
+          
+          
+
+          
 
         
     </body>

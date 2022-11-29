@@ -119,3 +119,28 @@
     padding-bottom: 0px;
 }
 
+/* SIDEBAR */
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    background-color: #A12520;
+    width: 245px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+
+}
+
+.main-content{
+    background-color: aquamarine;
+}
