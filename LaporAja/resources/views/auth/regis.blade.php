@@ -24,7 +24,7 @@
                                 Buat akun baru.
                             </h1>
                             <p class="d-inline">
-                                Sudah punya akun? <a href="#" class="d-inline text text-decoration-none">Masuk</a>
+                                Sudah punya akun? <a href="/login" class="d-inline text text-decoration-none">Masuk</a>
                             </p>
                         </div>       
         
@@ -58,7 +58,7 @@
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Daftar</button>
                             </div>
                           </form>
-                            <p class="text-center">atau </p>
+                            <!-- <p class="text-center">atau </p>
                             <div class="container text-center">
                                 <div class="row justify-content-center align-item-center">
                                   <div class="col">
@@ -69,16 +69,15 @@
                                   </div>
                                 </div>
                                 
-                              </div>
+                              </div> -->
                             <!-- <a class="signin-google" href="#"> <img src="icongoogle.png" alt=""></a>
         
                             <a class="signin-fb" href="#"> <img src="iconfb.png" alt=""></a> -->
                         </div>
                     </div>
                 </div>
-            
             </div>                              
-            <div class="login-right bg-success w-50 h-100">
+            <div class="login-right w-50 h-100">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
