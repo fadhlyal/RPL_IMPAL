@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="css\style.css">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,7 +23,7 @@
                     <div class="col-6">
                         <div class="header">
                             <h1 class="gis">
-                                Buat akun baru.
+                                Buat Akun
                             </h1>
                             <p class="d-inline">
                                 Sudah punya akun? <a href="/login" class="d-inline text text-decoration-none">Masuk</a>
@@ -34,13 +36,13 @@
                             <div class="row g-2">
                               <div class="col-md">
                                 <div class="form-floating">
-                                  <input type="firstname" class="form-control" id="floatingInputGrid" name="firstname" placeholder="Agus">
+                                  <input type="firstname" class="form-control" id="floatingInputGrid" name="firstname" placeholder=" ">
                                   <label for="floatingInputGrid">Nama depan</label>
                                 </div>
                               </div>
                               <div class="col-md">
                                 <div class="form-floating">
-                                  <input type="lastname" class="form-control" id="floatingInputGrid" name="lastname" placeholder="Hidayat">
+                                  <input type="lastname" class="form-control" id="floatingInputGrid" name="lastname" placeholder=" ">
                                   <label for="floatingInputGrid">Nama belakang</label>
                                 </div>
                               </div>
