@@ -41,7 +41,7 @@ class RegisterController extends Controller
                 'firstname' => 'required',
                 'lastname' => 'required',
                 'phonenumber' => 'required',
-                'email' => 'required|email',
+                'email' => 'required|unique:users,email',
                 'password' => 'required',
             ]);
 

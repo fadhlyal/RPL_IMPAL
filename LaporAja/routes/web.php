@@ -14,13 +14,21 @@ use App\Http\Controllers\Api\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['guest']], function() {
+    Route::get('/login', [LoginController::class, 'create'])->name('login');
+    Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/login', [LoginController::class, 'create']);
-Route::post('/login', [LoginController::class, 'store']);
-
-Route::get('/register', [RegisterController::class, 'create']);
-Route::post('/register', [RegisterController::class, 'store']);
-
-Route::get('/', function() {
-    return view('welcome');
+    Route::get('/register', [RegisterController::class, 'create'])->name('register');
+    Route::post('/register', [RegisterController::class, 'store']);
 });
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', function() {
+        return view('welcome');
+    })->name('dashboard');
+    Route::get('/', function() {
+        return view('welcome');
+    });
+    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+});
+

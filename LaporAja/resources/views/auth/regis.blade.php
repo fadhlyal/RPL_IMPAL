@@ -32,7 +32,7 @@
         
                         <div class="login-form">                   
                           <form method="POST" action="/register">
-                            {{ csrf_field() }}
+                            @csrf
                             <div class="row g-2">
                               <div class="col-md">
                                 <div class="form-floating">
