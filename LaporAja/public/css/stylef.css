@@ -135,7 +135,7 @@ body{
 
 /* Landing Page */
 #hero{
-    background-image: url("hero4.jpg");
+    background-image: url("../images/hero4.jpg");
     height: 90vh;
     width: 100%;
     background-size: cover;

@@ -23,27 +23,22 @@ Route::group(['middleware' => ['guest']], function() {
 });
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/dashboard', function() {
-        return view('landingpage');
-    })->name('dashboard');
-    Route::get('/', function() {
-        return view('welcome');
+    Route::get('/laporan', function() {
+        return view('lapor');
     });
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('/laporan', function() {
-    return view('lapor');
-});
-
 Route::get('/forum', function() {
     return view('forum');
-});
+})->name('forum');
 
 Route::get('/kontakdarurat', function() {
     return view('telepon');
-});
+})->name('kontak');
 
 Route::get('/dashboard', function() {
     return view('landingpage');
-});
+})->name('dashboard');
+
+Route::redirect('/', '/dashboard');
