@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <script src="https://kit.fontawesome.com/1b514b8e9a.js" crossorigin="anonymous"></script>
     
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css\stylef.css">
