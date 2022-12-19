@@ -25,7 +25,7 @@ Route::group(['middleware' => ['guest']], function() {
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/laporan', function() {
         return view('lapor');
-    });
+    })->name('laporan');
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 

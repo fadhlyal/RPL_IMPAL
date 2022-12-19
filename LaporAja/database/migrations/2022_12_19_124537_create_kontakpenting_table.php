@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswa', function (Blueprint $table) {
+        Schema::create('kontakpenting', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('password');
-            $table->softDeletes();
+            $table->foreignId('admin_id')->constrained('admins');
+            $table->string('namainstansi');
+            $table->string('nomortelepon');
+            $table->string('alamat');
+            $table->string('jenisinstansi');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswa');
+        Schema::dropIfExists('kontakpenting');
     }
 };
