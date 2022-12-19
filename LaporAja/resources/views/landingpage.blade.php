@@ -43,17 +43,17 @@
 
     <section id="feature" class="section-p1">
         <div class="fe-box">
-            <img src="images\write2.png" alt="">
+            <a href="/laporan"><img src="images\write2.png" alt=""></a>
             <h2>Lapor</h2>
         </div>
 
         <div class="fe-box">
-            <img src="images\form.png" alt="">
+            <a href="/forum"><img src="images\form.png" alt=""></a>
             <h2>Forum</h2>
         </div>
 
         <div class="fe-box">
-            <img src="images\phone.png" alt="">
+            <a href="/kontakdarurat"><img src="images\phone.png" alt=""></a>
             <h2>Telepon</h2>
         </div>
     </section>
