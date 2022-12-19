@@ -42,6 +42,7 @@
 
                             <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
                           </form>
+                          @include('partial.formerror')
                         </div>
                     </div>
                 </div>

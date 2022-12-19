@@ -42,7 +42,7 @@ class LoginController extends Controller
             ]);
         }
 
-        return redirect()->to('/');
+        return redirect()->to('/')->with('success', 'Berhasil Log In');
         /**
         *$data = User::where('email','=',$request->email)->get();
         *
