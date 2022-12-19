@@ -60,5 +60,5 @@
 
 
 
-    <script src="scriptf.js"></script>
+    <script src="jss\scriptf.js"></script>
 </body>
