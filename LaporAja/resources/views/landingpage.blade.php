@@ -20,12 +20,14 @@
 
 <body>
     <section id="header">
-        <a href="#"><img src="images\logo header.png" class="logo" alt=""></a>
+        <a href="/dashboard"><img src="images\logo header.png" class="logo" alt=""></a>
 
         <div>
             <ul id="navbar">
-                <li><a class="active" href="">Beranda</a></li>
-                <li><a href="">Tentang</a></li>
+                <li><a class="active" href="/dashboard">Beranda</a></li>
+                <li><a href="/laporan">Laporan</a></li>
+                <li><a href="/forum">Forum</a></li>
+                <li><a href="/kontakdarurat">Kontak</a></li>
                 <li><a href=""><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </div>
@@ -57,8 +59,6 @@
             <h2>Telepon</h2>
         </div>
     </section>
-
-
 
     <script src="jss\scriptf.js"></script>
 </body>
