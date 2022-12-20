@@ -39,10 +39,10 @@
         <form method="POST" action="/laporan" class="row g-3">
           @csrf
           <div class="col-12">
-            <input type="text" class="form-control" name='judul' id="inputAddress" placeholder="Judul">
+            <input type="text" class="form-control" name='judul' id="inputAddress" placeholder="Judul"required>
           </div>
           <div class="col-12">
-            <input type="text" class="form-control" name='alamat' id="inputAddress2" placeholder="Alamat">
+            <input type="text" class="form-control" name='alamat' id="inputAddress2" placeholder="Alamat"required>
           </div>
 
           
@@ -63,7 +63,7 @@
             <input type="text" class="form-control" id="inputAddress" placeholder="Nama Pelapor">
           </div>
           <div class="form-floating">
-            <textarea class="form-control" name='deskripsi' placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" name='deskripsi' placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
             <label for="floatingTextarea2">Deskripsi Laporan</label>
           </div>
           
