@@ -70,5 +70,25 @@
         </div>
     </section>
 
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images\logo header.png" alt="">
+            <h4>Kontak</h4>
+            <p><strong>Alamat</strong> Gg. Desa Lengkong, Bojongsoang, Kabupaten Bandung</p>
+            <p><strong>Telepon</strong> +62 212 8987 099</p>
+            <p><strong>Jam kerja</strong> 09.00 - 17.00, Senin - Jumat</p>
+
+            <div class="follow">
+                <h4>Ikuti kami</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="jss\scriptf.js"></script>
 </body>

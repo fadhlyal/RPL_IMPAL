@@ -30,7 +30,13 @@
                 <li><a class="active" href="/laporan">Laporan</a></li>
                 <li><a href="/forum">Forum</a></li>
                 <li><a href="/kontakdarurat">Kontak</a></li>
-                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                <li>|</li>
+                @if (auth()->check())
+                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                @else
+                    <li><a href="/login">Masuk</a></li>
+                    <li><a href="/register">Daftar</a></li> 
+                @endif
             </ul>
         </div>
     </section>

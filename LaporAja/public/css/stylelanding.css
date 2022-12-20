@@ -93,7 +93,7 @@ body{
 }
 
 #hero{
-    background-image: url("../images/hero5.jpg");
+    background-image: url("../images/hero6.jpg");
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -147,4 +147,36 @@ body{
 #product1{
     text-align: center;
     padding-bottom: 0;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
 }

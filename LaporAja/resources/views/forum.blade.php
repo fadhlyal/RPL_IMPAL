@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<section id="header">
+    <section id="header">
         <a href="/dashboard"><img src="images\logo header.png" class="logo" alt=""></a>
 
         <div>
@@ -27,7 +27,13 @@
                 <li><a href="/laporan">Laporan</a></li>
                 <li><a class="active" href="/forum">Forum</a></li>
                 <li><a href="/kontakdarurat">Kontak</a></li>
-                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                <li>|</li>
+                @if (auth()->check())
+                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                @else
+                    <li><a href="/login">Masuk</a></li>
+                    <li><a href="/register">Daftar</a></li> 
+                @endif
             </ul>
         </div>
     </section>
