@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class LaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +23,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        //
     }
 
     /**
@@ -36,24 +34,7 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        if (auth()->attempt(request(['email', 'password'])) == false) {
-            return back()->withErrors([
-                'message' => 'The email or password is incorrect, please try again'
-            ]);
-        }
-
-        return redirect()->to('/')->with('success', 'Berhasil Log In');
-        /**
-        *$data = User::where('email','=',$request->email)->get();
-        *
-        *if ($data) {
-        *    return redirect()->to('/');
-        *} else {
-        *    return back()->withErrors([
-        *        'message' => 'The email or password is incorrect, please try again'
-        *    ]);
-        *}
-        */
+        //
     }
 
     /**
