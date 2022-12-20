@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('kabkota');
             $table->string('kecamatan');
             $table->string('deskripsi');
+            $table->string('status');
             $table->timestamps();
         });
     }

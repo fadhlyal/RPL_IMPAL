@@ -17,7 +17,8 @@ class Laporan extends Model
         'provinsi',
         'kabkota',
         'kecamatan',
-        'deskripsi'
+        'deskripsi',
+        'status'
     ];
 
     protected $hidden = [];

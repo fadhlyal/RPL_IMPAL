@@ -53,6 +53,7 @@ class LaporanController extends Controller
             'kabkota' => $request->kabkota,
             'kecamatan' => $request->kecamatan,
             'deskripsi' => $request->deskripsi,
+            'status' => 'diproses',
         ]);
 
         $data = Laporan::where('id','=',$laporan->id)->get();
