@@ -115,6 +115,6 @@ class UserController extends Controller
     {
         auth()->logout();
 
-        return redirect()->to('/login');
+        return redirect()->to('/dashboard');
     }
 }

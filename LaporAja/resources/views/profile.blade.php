@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="css\styled.css">
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 </head>
@@ -22,13 +22,13 @@
 <body>
     <section id="menu">
         <div class="logo">
-            <img src="logo sidebar.png" alt="">
+            <a href="/dashboard"><img src="images\logo sidebar.png" alt=""></a>
         </div>
 
         <div class="items">
-            <!-- <li><i class="fa-solid fa-circle-user"></i><a href="#">Profile</a></li> -->
-            <li><i class="fa-solid fa-clipboard-list"></i><a href="#">Laporan</a></li>
-            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Keluar</a></li>
+            <!-- <li><i class="fa-solid fa-circle-user"></i><a href="/profile">Profile</a></li> -->
+            <li><i class="fa-solid fa-clipboard-list"></i><a href="">Laporan</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="/logout">Keluar</a></li>
         </div>
     </section>
 
@@ -96,7 +96,7 @@
                <tbody>
                     <tr>
                         <td class="people">
-                            <img src="man1.jpg" alt="">
+                            <img src="images\man1.jpg" alt="">
                             <div class="people-de">
                                 <h5>Kian Naila</h5>
                                 <p>kianizz@gmail.com</p>
@@ -126,7 +126,7 @@
 
                     <tr>
                         <td class="people">
-                            <img src="man1.jpg" alt="">
+                            <img src="images\man1.jpg" alt="">
                             <div class="people-de">
                                 <h5>Kian Naila</h5>
                                 <p>kianizz@gmail.com</p>
@@ -156,7 +156,7 @@
 
                     <tr>
                         <td class="people">
-                            <img src="man1.jpg" alt="">
+                            <img src="images\man1.jpg" alt="">
                             <div class="people-de">
                                 <h5>Kian Naila</h5>
                                 <p>kianizz@gmail.com</p>
@@ -186,7 +186,7 @@
 
                     <tr>
                         <td class="people">
-                            <img src="man1.jpg" alt="">
+                            <img src="images\man1.jpg" alt="">
                             <div class="people-de">
                                 <h5>Kian Naila</h5>
                                 <p>kianizz@gmail.com</p>
@@ -216,7 +216,7 @@
 
                     <tr>
                         <td class="people">
-                            <img src="man1.jpg" alt="">
+                            <img src="images\man1.jpg" alt="">
                             <div class="people-de">
                                 <h5>Kian Naila</h5>
                                 <p>kianizz@gmail.com</p>
@@ -243,10 +243,6 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                     </tr>
-
-                    
-               
-
                </tbody>
             </table>
         </div>
