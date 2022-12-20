@@ -11,6 +11,7 @@ class KontakPenting extends Model
 
     protected $table = 'kontakpenting';
     protected $fillable = [
+        'admin_id',
         'namainstansi',
         'nomortelepon',
         'alamat',
