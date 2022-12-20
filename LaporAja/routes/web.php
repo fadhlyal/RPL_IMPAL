@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\KontakController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,19 +26,13 @@ Route::group(['middleware' => ['guest']], function() {
 });
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/laporan', function() {
-        return view('lapor');
-    })->name('laporan');
+    Route::get('/laporan', [LaporanController::class, 'create'])->name('laporan');
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('/forum', function() {
-    return view('forum');
-})->name('forum');
+Route::get('/forum', [ForumController::class, 'create'])->name('forum');
 
-Route::get('/kontakdarurat', function() {
-    return view('telepon');
-})->name('kontak');
+Route::get('/kontakdarurat', [KontakController::class, 'create'])->name('kontak');
 
 Route::get('/dashboard', function() {
     return view('landingpage');
