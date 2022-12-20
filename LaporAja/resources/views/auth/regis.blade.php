@@ -53,28 +53,12 @@
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email">
           
                             <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi">
-                            
-                              
-                        
+
                             <div class="masuk">
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Daftar</button>
                             </div>
                           </form>
-                            <!-- <p class="text-center">atau </p>
-                            <div class="container text-center">
-                                <div class="row justify-content-center align-item-center">
-                                  <div class="col">
-                                    <a class="signin-google" href="#"> <img src="images\icongoogle.png" alt=""></a>
-                                  </div>
-                                  <div class="col">
-                                    <a class="signin-fb" href="#"> <img src="images\iconfb.png" alt=""></a>
-                                  </div>
-                                </div>
-                                
-                              </div> -->
-                            <!-- <a class="signin-google" href="#"> <img src="icongoogle.png" alt=""></a>
-        
-                            <a class="signin-fb" href="#"> <img src="iconfb.png" alt=""></a> -->
+                          <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
                         </div>
                     </div>
                 </div>
