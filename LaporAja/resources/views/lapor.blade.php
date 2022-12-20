@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <script src="https://kit.fontawesome.com/1b514b8e9a.js" crossorigin="anonymous"></script>
     </head>
 
 
@@ -58,16 +60,16 @@
               </div>
             </div>
 
-
+<!-- 
           <div class="col-12">            
             <input type="text" class="form-control" id="inputAddress" placeholder="Nama Pelapor">
-          </div>
+          </div> -->
           <div class="form-floating">
             <textarea class="form-control" name='deskripsi' placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
             <label for="floatingTextarea2">Deskripsi Laporan</label>
           </div>
           
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
               <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
               <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
@@ -78,7 +80,7 @@
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
             <label class="form-check-label" for="flexSwitchCheckChecked">Kirim sebagai Anonim</label>
-          </div>
+          </div> -->
 
           <div class="col-12">
             <button type="submit" class="btn btn-primary">Kirim</button>

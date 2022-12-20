@@ -28,10 +28,12 @@
                 <li><a href="/laporan">Laporan</a></li>
                 <li><a href="/forum">Forum</a></li>
                 <li><a href="/kontakdarurat">Kontak</a></li>
+                <li>|</li>
                 @if (auth()->check())
                     <li><a href=""><i class="fa-solid fa-user"></i></a></li>
                 @else
-                    <li><a href="/login">Log In</a></li>
+                    <li><a href="/login">Masuk</a></li>
+                    <li><a href="/register">Daftar</a></li> 
                 @endif
             </ul>
         </div>
@@ -43,7 +45,11 @@
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>Halo Guest, Silahkan Pilih Opsi Menu</h2>
+        @if (auth()->check())
+            <h2>Halo {{ Auth::user()->lastname }}, Silahkan Pilih Opsi Menu</h2>
+        @else
+            <h2>Halo Guest, Silahkan Pilih Opsi Menu</h2>
+        @endif
         <p>Pilih sesuai dengan kebutuhan anda</p>
     </section>
 
