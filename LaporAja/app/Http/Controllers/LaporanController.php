@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -34,7 +36,39 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->validate([
+            'judul' => 'required',
+            'alamat' => 'required',
+            'provinsi' => 'required',
+            'kabkota' => 'required',
+            'kecamatan' => 'required',
+            'deskripsi' => 'required',
+        ])== false)
+        {
+            return back()->withErrors([
+                'message' => 'Mohon isi semua formnya'
+            ]);
+        }
+
+        $laporan = Laporan::create([
+            'judul' => $request->judul,
+            'user_id' => auth()->id(),
+            'alamat' => $request->alamat,
+            'provinsi' => $request->provinsi,
+            'kabkota' => $request->kabkota,
+            'kecamatan' => $request->kecamatan,
+            'deskripsi' => $request->deskripsi,
+        ]);
+
+        $data = Laporan::where('id','=',$laporan->id)->get();
+
+        if ($data) {
+            return redirect()->to('/laporan');
+        } else {
+            return back()->withErrors([
+                'message' => 'Terdapat kesalahan'
+            ]);
+        }
     }
 
     /**

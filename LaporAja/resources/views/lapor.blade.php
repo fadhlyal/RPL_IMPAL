@@ -35,24 +35,26 @@
 
       <main class="px-3">
         <h1 class="text">Tulis laporan kamu disini!</h1>
-        <form class="row g-3">
+        @include('partial.formerror')
+        <form method="POST" action="/laporan" class="row g-3">
+          @csrf
           <div class="col-12">
-            <input type="text" class="form-control" id="inputAddress" placeholder="Judul">
+            <input type="text" class="form-control" name='judul' id="inputAddress" placeholder="Judul">
           </div>
           <div class="col-12">
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Alamat">
+            <input type="text" class="form-control" name='alamat' id="inputAddress2" placeholder="Alamat">
           </div>
 
-          <form class="row g-3 needs-validation" novalidate>
+          
             <div class="col-md-4">              
-              <input type="text" class="form-control" id="validationCustom01" value="Provinsi" required>
+              <input type="text" class="form-control" name='provinsi' id="validationCustom01" placeholder="Provinsi" required>
             </div>
             <div class="col-md-4">              
-              <input type="text" class="form-control" id="validationCustom02" value="Kab/Kota" required>
+              <input type="text" class="form-control" name='kabkota' id="validationCustom02" placeholder="Kab/Kota" required>
             </div>
             <div class="col-md-4">              
               <div class="input-group has-validation">                
-                <input type="text" class="form-control" id="validationCustom02" value="Kecamatan" required>
+                <input type="text" class="form-control" name='kecamatan' id="validationCustom02" placeholder="Kecamatan" required>
               </div>
             </div>
 
@@ -61,7 +63,7 @@
             <input type="text" class="form-control" id="inputAddress" placeholder="Nama Pelapor">
           </div>
           <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" name='deskripsi' placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
             <label for="floatingTextarea2">Deskripsi Laporan</label>
           </div>
           

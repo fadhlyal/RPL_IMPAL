@@ -27,6 +27,7 @@ Route::group(['middleware' => ['guest']], function() {
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/laporan', [LaporanController::class, 'create'])->name('laporan');
+    Route::post('/laporan', [LaporanController::class, 'store']);
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 

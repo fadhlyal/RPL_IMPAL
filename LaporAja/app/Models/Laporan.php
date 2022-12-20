@@ -12,6 +12,7 @@ class Laporan extends Model
     protected $table = 'laporan';
     protected $fillable = [
         'judul',
+        'user_id',
         'alamat',
         'provinsi',
         'kabkota',

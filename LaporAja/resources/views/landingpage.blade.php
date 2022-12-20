@@ -28,7 +28,11 @@
                 <li><a href="/laporan">Laporan</a></li>
                 <li><a href="/forum">Forum</a></li>
                 <li><a href="/kontakdarurat">Kontak</a></li>
-                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                @if (auth()->check())
+                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                @else
+                    <li><a href="/login">Log In</a></li>
+                @endif
             </ul>
         </div>
     </section>
