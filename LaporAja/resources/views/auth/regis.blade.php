@@ -36,29 +36,30 @@
                             <div class="row g-2">
                               <div class="col-md">
                                 <div class="form-floating">
-                                  <input type="firstname" class="form-control" id="floatingInputGrid" name="firstname" placeholder=" ">
+                                  <input type="firstname" class="form-control" id="floatingInputGrid" name="firstname" required>
                                   <label for="floatingInputGrid">Nama depan</label>
                                 </div>
                               </div>
                               <div class="col-md">
                                 <div class="form-floating">
-                                  <input type="lastname" class="form-control" id="floatingInputGrid" name="lastname" placeholder=" ">
+                                  <input type="lastname" class="form-control" id="floatingInputGrid" name="lastname" required>
                                   <label for="floatingInputGrid">Nama belakang</label>
                                 </div>
                               </div>
                             </div>
 
-                            <input type="hp" class="form-control" id="hp" name="phonenumber" placeholder="Hp">  
+                            <input type="hp" class="form-control" id="hp" name="phonenumber" placeholder="Hp" required>  
                             
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
           
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi" required>
 
                             <div class="masuk">
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Daftar</button>
                             </div>
                           </form>
                           <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
+                          @include('partial.formerror')
                         </div>
                     </div>
                 </div>

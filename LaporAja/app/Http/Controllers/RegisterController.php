@@ -58,10 +58,14 @@ class RegisterController extends Controller
             if ($data) {
                 return redirect()->to('/login');
             } else {
-                return ApiFormatter::createApi('400', 'Failed');
+                return back()->withErrors([
+                   'message' => 'Terjadi kesalahan'
+                ]);
             }
         } catch (Exception $error) {
-            return ApiFormatter::createApi('400', 'Failed');
+            return back()->withErrors([
+                'message' => 'Terjadi kesalahan'
+            ]);
         }
     }
 
