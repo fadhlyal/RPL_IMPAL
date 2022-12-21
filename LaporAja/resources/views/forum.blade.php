@@ -42,7 +42,7 @@
         <div class="forum">
             <div class="kiri">
                 @foreach($laporankiri as $key => $data)
-                    <h3 class="namauser">{{$data->user->firstname}}</h3>
+                    <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
                     <h3 class="jenis">{{$data->judul}}</h3>
                     @if ($data->status == 'selesai')
                         <i class="fa-solid fa-check"></i> 
@@ -58,7 +58,7 @@
 
             <div class="kanan">
                 @foreach($laporankanan as $key => $data)
-                    <h3 class="namauser">{{$data->user->firstname}}</h3>
+                    <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
                     <h3 class="jenis">{{$data->judul}}</h3>
                     @if ($data->status == 'selesai')
                         <i class="fa-solid fa-check"></i> 
