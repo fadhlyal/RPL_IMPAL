@@ -43,7 +43,7 @@
 
       <main class="px-3">
         <h1 class="text">Tulis laporan kamu disini!</h1>
-        @include('partial.formerror')
+        @include('partial.alert')
         <form method="POST" action="/laporan" class="row g-3">
           @csrf
           <div class="col-12">

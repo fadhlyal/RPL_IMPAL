@@ -41,55 +41,35 @@
     <div class="container">
         <div class="forum">
             <div class="kiri">
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Perbaikan akses jalan</h3>
-                <i class="fa-solid fa-check"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Butuh uang cicilan</h3>
-                <i class="fa-solid fa-xmark check"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Rizki Nur</h3>
-                <h3 class="jenis">Tologn ada maling</h3>
-                <i class="fa-solid fa-check"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Jembatan rusak</h3>
-                <i class="fa-solid fa-check"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
+                @foreach($laporankiri as $key => $data)
+                    <h3 class="namauser">{{$data->user->firstname}}</h3>
+                    <h3 class="jenis">{{$data->judul}}</h3>
+                    @if ($data->status == 'selesai')
+                        <i class="fa-solid fa-check"></i> 
+                    @elseif ($data->status == 'ditolak')
+                        <i class="fa-solid fa-xmark"></i>
+                    @else
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    @endif
+                    <h4 class="alamat">{{$data->alamat}}, {{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h4>
+                    <h4 class="waktu">{{$data->created_at}}</h4>
+                @endforeach
             </div>
 
             <div class="kanan">
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Butuh beli hp</h3>
-                <i class="fa-solid fa-xmark"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Perbaikan akses jalan</h3>
-                <i class="fa-solid fa-arrows-spin"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Jalan berlubang</h3>
-                <i class="fa-solid fa-xmark"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
-
-                <h3 class="namauser">Anonim</h3>
-                <h3 class="jenis">Jembatan ambrol</h3>
-                <i class="fa-solid fa-check"></i>
-                <h4 class="alamat">Kecamatan Sukajadi, Kota Bandung</h4>
-                <h4 class="waktu">1 jam yang lalu</h4>
+                @foreach($laporankanan as $key => $data)
+                    <h3 class="namauser">{{$data->user->firstname}}</h3>
+                    <h3 class="jenis">{{$data->judul}}</h3>
+                    @if ($data->status == 'selesai')
+                        <i class="fa-solid fa-check"></i> 
+                    @elseif ($data->status == 'ditolak')
+                        <i class="fa-solid fa-xmark"></i>
+                    @else
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    @endif
+                    <h4 class="alamat">{{$data->alamat}}, {{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h4>
+                    <h4 class="waktu">{{$data->created_at}}</h4>
+                @endforeach
             </div>
         </div>
     </div>

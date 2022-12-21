@@ -14,7 +14,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        <title>LaporAja</title>
+        <title>Register</title>
     </head>
     <body>
         <section class="login d-flex">
@@ -52,14 +52,16 @@
                             
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
           
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi" minlength="8" required>
+
+                            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Konfirmasi Kata sandi" minlength="8" required>
 
                             <div class="masuk">
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Daftar</button>
                             </div>
                           </form>
                           <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
-                          @include('partial.formerror')
+                          @include('partial.alert')
                         </div>
                     </div>
                 </div>

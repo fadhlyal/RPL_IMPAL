@@ -59,6 +59,7 @@ class LaporanController extends Controller
         $data = Laporan::where('id','=',$laporan->id)->get();
 
         if ($data) {
+            $request->session()->flash('success', 'Laporan berhasil ditambahkan!');
             return redirect()->to('/laporan');
         } else {
             return back()->withErrors([

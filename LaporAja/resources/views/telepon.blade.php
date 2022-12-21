@@ -62,16 +62,25 @@
         <div class="container text-center">
             <div class="row">
             <div class="col">
-                <h4>RSUD Dr. Hasan Sadikin</h4>
-                <h7>Kec. Sukajadi, Kota Bandung</h7>
+                @foreach($rumahsakit as $key => $data)
+                    <h4><strong>{{$data->namainstansi}}</strong></h4>
+                    <h7>{{$data->alamat}}</h7>
+                    <h4>{{$data->nomortelepon}}</h4>
+                @endforeach
             </div>
             <div class="col">
-                <h4>Polsek REGOL</h4>
-                <h7>Kec. Sukajadi, Kota Bandung</h7>
+                @foreach($polisi as $key => $data)
+                    <h4><strong>{{$data->namainstansi}}</strong></h4>
+                    <h7>{{$data->alamat}}</h7>
+                    <h4>{{$data->nomortelepon}}</h4>
+                @endforeach
             </div>
             <div class="col">
-                <h4>Dinas Kebakaran</h4>
-                <h7>Kec. Sukajadi, Kota Bandung</h7>
+                @foreach($pemadam as $key => $data)
+                    <h4><strong>{{$data->namainstansi}}</strong></h4>
+                    <h7>{{$data->alamat}}</h7>
+                    <h4>{{$data->nomortelepon}}</h4>
+                @endforeach
             </div>
             </div>
         </div>

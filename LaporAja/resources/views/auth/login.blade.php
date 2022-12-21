@@ -14,7 +14,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        <title>LaporAja</title>
+        <title>Login</title>
         
     </head>
     <body>
@@ -42,7 +42,7 @@
 
                             <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
                           </form>
-                          @include('partial.formerror')
+                          @include('partial.alert')
                         </div>
                     </div>
                 </div>

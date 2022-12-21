@@ -29,6 +29,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/laporan', [LaporanController::class, 'create'])->name('laporan');
     Route::post('/laporan', [LaporanController::class, 'store']);
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+    Route::get('/profile', function() {
+        return view('profile');
+    })->name('profile');
 });
 
 Route::get('/forum', [ForumController::class, 'create'])->name('forum');
@@ -38,9 +41,5 @@ Route::get('/kontakdarurat', [KontakController::class, 'create'])->name('kontak'
 Route::get('/dashboard', function() {
     return view('landingpage');
 })->name('dashboard');
-
-Route::get('/profile', function() {
-    return view('profile');
-})->name('profile');
 
 Route::redirect('/', '/dashboard');

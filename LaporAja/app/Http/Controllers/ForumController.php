@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Laporan;
 
 class ForumController extends Controller
 {
@@ -23,7 +25,12 @@ class ForumController extends Controller
      */
     public function create()
     {
-        return view('forum');
+        $laporanganjil = Laporan::with('user')->whereRaw('id % 2 != 0')->get();
+        $laporangenap = Laporan::with('user')->whereRaw('id % 2 = 0')->get();
+        return view('forum', [
+            'laporankiri' => $laporanganjil,
+            'laporankanan' => $laporangenap
+        ]);
     }
 
     /**

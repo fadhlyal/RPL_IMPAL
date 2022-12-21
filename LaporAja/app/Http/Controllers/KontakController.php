@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\KontakPenting;
 
 class KontakController extends Controller
 {
@@ -23,7 +25,14 @@ class KontakController extends Controller
      */
     public function create()
     {
-        return view('telepon');
+        $rumahsakit =  KontakPenting::where('jenisinstansi','=', 'Rumah Sakit')->get();
+        $polisi = KontakPenting::where('jenisinstansi','=', 'Kantor Polisi')->get();
+        $pemadam = KontakPenting::where('jenisinstansi','=', 'Kantor Pemadam')->get();
+        return view('telepon', [
+            'rumahsakit' => $rumahsakit,
+            'polisi' => $polisi,
+            'pemadam' => $pemadam
+        ]);
     }
 
     /**
