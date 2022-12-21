@@ -59,7 +59,7 @@
 
     <section id="main">
 
-        <div class="container text-center">
+        <div class="container">
             <div class="row">
             <div class="col">
                 @foreach($rumahsakit as $key => $data)
