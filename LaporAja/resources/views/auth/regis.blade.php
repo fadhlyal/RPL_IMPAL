@@ -48,7 +48,7 @@
                               </div>
                             </div>
 
-                            <input type="hp" class="form-control" id="hp" name="phonenumber" placeholder="Hp" required>  
+                            <input type="text" class="form-control" id="hp" name="phonenumber" placeholder="Hp" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required>  
                             
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
           
