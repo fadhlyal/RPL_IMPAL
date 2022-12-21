@@ -43,32 +43,34 @@
             <div class="kiri">
                 @foreach($laporankiri as $key => $data)
                     <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
-                    <h3 class="jenis">{{$data->judul}}</h3>
+                    <h3 class="jenis">{{$data->judul}}
                     @if ($data->status == 'selesai')
-                        <i class="fa-solid fa-check"></i> 
+                        <i class="fa-solid fa-check"></i>
                     @elseif ($data->status == 'ditolak')
                         <i class="fa-solid fa-xmark"></i>
                     @else
                         <i class="fa-solid fa-arrows-spin"></i>
                     @endif
-                    <h4 class="alamat">{{$data->alamat}}, {{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h4>
-                    <h4 class="waktu">{{$data->created_at}}</h4>
+                    </h3>
+                    <h3 class="alamat"><!--{{$data->alamat}}, -->{{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h3>
+                    <h3 class="waktu">{{$data->created_at}}</h3>
                 @endforeach
             </div>
 
             <div class="kanan">
                 @foreach($laporankanan as $key => $data)
                     <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
-                    <h3 class="jenis">{{$data->judul}}</h3>
+                    <h3 class="jenis">{{$data->judul}}
                     @if ($data->status == 'selesai')
-                        <i class="fa-solid fa-check"></i> 
+                        <i class="fa-solid fa-check"></i>
                     @elseif ($data->status == 'ditolak')
                         <i class="fa-solid fa-xmark"></i>
                     @else
                         <i class="fa-solid fa-arrows-spin"></i>
                     @endif
-                    <h4 class="alamat">{{$data->alamat}}, {{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h4>
-                    <h4 class="waktu">{{$data->created_at}}</h4>
+                    </h3>
+                    <h3 class="alamat"> <!--{{$data->alamat}}, -->{{$data->kecamatan}}, {{$data->kabkota}}, {{$data->provinsi}}</h3>
+                    <h3 class="waktu">{{$data->created_at}}</h3>
                 @endforeach
             </div>
         </div>

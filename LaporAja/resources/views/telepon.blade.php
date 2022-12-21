@@ -41,18 +41,23 @@
     </section>
 
     <section id="daftar">
-
+        <!-- <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </div> -->
         <div class="container text-center">
             <div class="row">
-            <div class="col">
-                <li><a href=""><i class="fa-solid fa-hospital"></i>Rumah sakit</a></li>
-            </div>
-            <div class="col">
-                <li><a href=""><i class="fa-solid fa-handcuffs"></i>Polisi</a></li>
-            </div>
-            <div class="col">
-                <li><a href=""><i class="fa-solid fa-fire-extinguisher"></i>Pemadam Kebakaran</a></li>
-            </div>
+                <div class="col">
+                    <h5><a><i class="fa-solid fa-hospital"></i> Rumah sakit</a></h5>
+                </div>
+                <div class="col">
+                    <h5><a><i class="fa-solid fa-handcuffs"></i> Polisi</a></h5>
+                </div>
+                <div class="col">
+                    <h5><a><i class="fa-solid fa-fire-extinguisher"></i> Pemadam Kebakaran</a></h5>
+                </div>
             </div>
         </div>
     </section>
@@ -61,27 +66,27 @@
 
         <div class="container">
             <div class="row">
-            <div class="col">
-                @foreach($rumahsakit as $key => $data)
-                    <h4><strong>{{$data->namainstansi}}</strong></h4>
-                    <h7>{{$data->alamat}}</h7>
-                    <h4>{{$data->nomortelepon}}</h4>
-                @endforeach
-            </div>
-            <div class="col">
-                @foreach($polisi as $key => $data)
-                    <h4><strong>{{$data->namainstansi}}</strong></h4>
-                    <h7>{{$data->alamat}}</h7>
-                    <h4>{{$data->nomortelepon}}</h4>
-                @endforeach
-            </div>
-            <div class="col">
-                @foreach($pemadam as $key => $data)
-                    <h4><strong>{{$data->namainstansi}}</strong></h4>
-                    <h7>{{$data->alamat}}</h7>
-                    <h4>{{$data->nomortelepon}}</h4>
-                @endforeach
-            </div>
+                <div class="col">
+                    @foreach($rumahsakit as $key => $data)
+                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h6>{{$data->alamat}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6>
+                    @endforeach
+                </div>
+                <div class="col">
+                    @foreach($polisi as $key => $data)
+                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h6>{{$data->alamat}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6>
+                    @endforeach
+                </div>
+                <div class="col">
+                    @foreach($pemadam as $key => $data)
+                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h6>{{$data->alamat}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

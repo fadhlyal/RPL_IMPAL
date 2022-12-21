@@ -60,8 +60,8 @@
             <div class="col-md-4">              
               <input type="text" class="form-control" name='kabkota' id="validationCustom02" placeholder="Kab/Kota" required>
             </div>
-            <div class="col-md-4">              
-              <div class="input-group has-validation">                
+            <div class="col-md-4">
+              <div class="input-group has-validation">    
                 <input type="text" class="form-control" name='kecamatan' id="validationCustom02" placeholder="Kecamatan" required>
               </div>
             </div>

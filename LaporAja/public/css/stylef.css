@@ -19,9 +19,8 @@ h4{
     
 }
 
-h6{
+h6 {
     font-size: 12;
-    font-weight: 700;
 }
 
 .section-p1{
@@ -86,8 +85,14 @@ body{
     left: 20px;
 }
 
-.container{
-    width: 980px; margin: auto;
+.container {
+    width: 980px;
+    padding-top: 20px;
+    margin: auto;
+}
+
+.container h5 { 
+    color:#A12520;
 }
 
 .container .forum .kiri{
@@ -144,4 +149,9 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+}
+
+.icons {
+    padding-left: 5%;
+    color: #A12520;
 }
