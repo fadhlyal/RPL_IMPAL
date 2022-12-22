@@ -19,8 +19,9 @@ h4{
     
 }
 
-h6 {
+h6{
     font-size: 12;
+    font-weight: 700;
 }
 
 .section-p1{
@@ -85,20 +86,15 @@ body{
     left: 20px;
 }
 
-.container {
+.container{
+    padding-top: 50px;
     width: 980px;
-    padding-top: 20px;
     margin: auto;
-}
-
-.container h5 { 
-    color:#A12520;
 }
 
 .container .forum .kiri{
     float: left;
     width: 450px;
-    
 }
 
 .jenis{
@@ -117,8 +113,13 @@ body{
 .container .forum .kanan{
     float: right;
     width: 450px;
-    
-    
+}
+
+/*font yang laporan*/
+
+h4{
+    font-weight: 400;
+    font-size: 18px;
 }
 
 /* icon status */
@@ -127,9 +128,22 @@ body{
     
 }
 
+.container .forum .kiri .selesai{
+    color: red;
+    
+}
+
 .container .forum .kanan i{
     color: green;
     
+}
+
+.container .forum .kanan .prog {
+    color: orange;
+}
+
+.container .forum i{
+    padding-left: 30px;
 }
 
 /* Telepon */
@@ -138,20 +152,56 @@ body{
     padding-bottom: 50px;
 }
 
-/* Landing Page */
-#hero{
-    background-image: url("../images/hero4.jpg");
-    height: 90vh;
-    width: 100%;
-    background-size: cover;
-    background-position: top 25% right 0;
-    padding: 0 80px;
+#main .col{
+    align-items: center;
+    text-align: center;
+}
+
+#main .container .col h4{
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+#main .container .col h7{
+    color: #837E7E;
+    padding-top: 0;
+}
+
+#daftar .row {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
 }
 
-.icons {
-    padding-left: 5%;
-    color: #A12520;
+#daftar .col {    
+    background: #ffffff;
+    border: 1px solid #333;
+    padding: 0px 15px;
+    margin: 6px 50px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+}
+
+#daftar .col img{
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+#daftar .col li{
+    padding-top: 40px;
+}
+
+#daftar .col a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#daftar .col li a i{
+    padding-right: 10px;
+}
+
+#main .col i{
+    color: red;
+    padding-left: 10px;
 }

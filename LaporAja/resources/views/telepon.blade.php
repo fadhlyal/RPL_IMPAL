@@ -50,13 +50,13 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col">
-                    <h5><a><i class="fa-solid fa-hospital"></i> Rumah sakit</a></h5>
+                    <li><a href=""><i class="fa-solid fa-hospital"></i>Rumah sakit</a></li>
                 </div>
                 <div class="col">
-                    <h5><a><i class="fa-solid fa-handcuffs"></i> Polisi</a></h5>
+                    <li><img src="images\imgrs.png" alt=""><a href="">Polisi</a></li>
                 </div>
                 <div class="col">
-                    <h5><a><i class="fa-solid fa-fire-extinguisher"></i> Pemadam Kebakaran</a></h5>
+                    <li><img src="images\imgfire.png" alt=""><a href="">Pemadam</a></li>
                 </div>
             </div>
         </div>
@@ -68,23 +68,29 @@
             <div class="row">
                 <div class="col">
                     @foreach($rumahsakit as $key => $data)
-                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h7>{{$data->alamat}}</h7>
+                        <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
-                        <h6>{{$data->nomortelepon}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6> -->
                     @endforeach
                 </div>
                 <div class="col">
                     @foreach($polisi as $key => $data)
-                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h7>{{$data->alamat}}</h7>
+                        <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
-                        <h6>{{$data->nomortelepon}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6> -->
                     @endforeach
                 </div>
                 <div class="col">
                     @foreach($pemadam as $key => $data)
-                        <h4><strong>{{$data->namainstansi}}</strong></h4>
+                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h7>{{$data->alamat}}</h7>
+                        <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
-                        <h6>{{$data->nomortelepon}}</h6>
+                        <h6>{{$data->nomortelepon}}</h6> -->
                     @endforeach
                 </div>
             </div>

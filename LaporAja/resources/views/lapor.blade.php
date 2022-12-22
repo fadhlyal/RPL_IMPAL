@@ -41,8 +41,12 @@
         </div>
     </section>
 
+    <section id="textsatu">
+        <h1>Tulis laporan kamu disini!</h1>
+    </section>
+
       <main class="px-3">
-        <h1 class="text">Tulis laporan kamu disini!</h1>
+        <!-- <h1 class="text">Tulis laporan kamu disini!</h1> -->
         @include('partial.alert')
         <form method="POST" action="/laporan" class="row g-3">
           @csrf

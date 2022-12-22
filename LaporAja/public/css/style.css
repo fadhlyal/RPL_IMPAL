@@ -157,3 +157,23 @@
     padding-bottom: 0px;
 }
 
+/*form lapor*/
+.px-3 {
+    width: 50%; /* Menetapkan lebar elemen "form" sebesar 50% */
+    margin: auto;
+}
+
+#textsatu h1{
+    color: #A12520;
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#but{
+    padding-top: 10px;
+    width: 60px; /* Menetapkan lebar elemen "but" sebesar 50% */
+    margin: auto; /* Menempatkan elemen "but" di tengah */
+}

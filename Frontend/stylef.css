@@ -90,13 +90,11 @@ body{
     padding-top: 50px;
     width: 980px;
     margin: auto;
-   
 }
 
 .container .forum .kiri{
     float: left;
     width: 450px;
-    
 }
 
 .jenis{
@@ -115,8 +113,6 @@ body{
 .container .forum .kanan{
     float: right;
     width: 450px;
-    
-    
 }
 
 /*font yang laporan*/
@@ -151,9 +147,6 @@ h4{
 }
 
 /* Telepon */
-
-
-
 #daftar li{
     list-style: none;
     padding-bottom: 50px;

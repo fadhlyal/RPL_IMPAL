@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container justify-content-center">
         <div class="forum">
             <div class="kiri">
                 @foreach($laporankiri as $key => $data)
