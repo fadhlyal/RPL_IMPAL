@@ -32,6 +32,15 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/profile', function() {
         return view('profile');
     })->name('profile');
+    Route::get('/profile/laporan-selesai', function() {
+        return view('dashboard-selesai');
+    })->name('dashboard-selesai');
+    Route::get('/profile/laporan-diproses', function() {
+        return view('dashboard-progres');
+    })->name('dashboard-progres');
+    Route::get('/profile/laporan-ditolak', function() {
+        return view('dashboard-ditolak');
+    })->name('dashboard-ditolak');
 });
 
 Route::get('/forum', [ForumController::class, 'create'])->name('forum');

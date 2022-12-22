@@ -56,19 +56,19 @@
 
         <div class="uptask">
             <div class="uptaskspace">
-                <h3><a class="active" href="/profile">Semua Laporan</a></h3>
+                <h3><a class="active" href="">Semua Laporan</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="/profile/laporan-diproses">Progres</a></h3>
+                <h3><a href="">Progres</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="/profile/laporan-ditolak">Ditolak</a></h3>
+                <h3><a href="">Ditolak</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="/profile/laporan-selesai">Selesai</a></h3>
+                <h3><a href="">Selesai</a></h3>
             </div>
         </div>
 
@@ -140,64 +140,6 @@
                             <h5>Bojongsoang</h5>
                         </td>
 
-                        <td class="active"><p class="not">Ditolak</p></td>
-                        <td class="edit"><a href="#">Edit</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="people">
-                            <!-- <img src="images\man1.jpg" alt=""> -->
-                            <div class="people-de">
-                                <h5>Kian Naila</h5>
-                                <!-- <p>kianizz@gmail.com</p> -->
-                            </div>
-                        </td>
-
-                        <td class="people-des">
-                            <h5>Perbaikan jalan</h5>
-                        </td>
-
-                        <td class="people-prov">
-                            <h5>Jawa Barat</h5>
-                        </td>
-
-                        <td class="people-city">
-                            <h5>Kab. Bandung</h5>
-                        </td>
-
-                        <td class="people-kec">
-                            <h5>Bojongsoang</h5>
-                        </td>
-
-                        <td class="active"><p class="prog">Progres</p></td>
-                        <td class="edit"><a href="#">Edit</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="people">
-                            <!-- <img src="images\man1.jpg" alt=""> -->
-                            <div class="people-de">
-                                <h5>Kian Naila</h5>
-                                <!-- <p>kianizz@gmail.com</p> -->
-                            </div>
-                        </td>
-
-                        <td class="people-des">
-                            <h5>Perbaikan jalan</h5>
-                        </td>
-
-                        <td class="people-prov">
-                            <h5>Jawa Barat</h5>
-                        </td>
-
-                        <td class="people-city">
-                            <h5>Kab. Bandung</h5>
-                        </td>
-
-                        <td class="people-kec">
-                            <h5>Bojongsoang</h5>
-                        </td>
-
                         <td class="active"><p class="done">Selesai</p></td>
                         <td class="edit"><a href="#">Edit</a></td>
                     </tr>
@@ -233,9 +175,6 @@
                </tbody>
             </table>
         </div>
-
-        
-
     </section>
 
     <script>
@@ -243,7 +182,5 @@
             $('#menu').toggleClass("active");
         })
     </script>
-
-
 </body>
 </html>

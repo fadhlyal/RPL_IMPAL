@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Profile</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="css\styled.css">
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 </head>
@@ -22,13 +22,13 @@
 <body>
     <section id="menu">
         <div class="logo">
-            <img src="logo sidebar.png" alt="">
+            <a href="/dashboard"><img src="images\logo sidebar.png" alt=""></a>
         </div>
 
         <div class="items">
-            <li><i class="fa-solid fa-circle-user"></i><a href="#">Profile</a></li>
-            <li><i class="fa-solid fa-clipboard-list"></i><a href="#">Laporan</a></li>
-            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Keluar</a></li>
+            <!-- <li><i class="fa-solid fa-circle-user"></i><a href="/profile">Profile</a></li> -->
+            <li><i class="fa-solid fa-clipboard-list"></i><a href="">Laporan</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="/logout">Keluar</a></li>
         </div>
     </section>
 
@@ -56,56 +56,21 @@
 
         <div class="uptask">
             <div class="uptaskspace">
-                <li><a class="active" href="dashboard.html">Semua Laporan</a></li>
+                <h3><a href="">Semua Laporan</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <li><a href="dashboard-progres.html">Progres</a></li>
+                <h3><a href="">Progres</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <li><a href="">Ditolak</a></li>
+                <h3><a class="active" href="">Ditolak</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <li><a href="">Selesai</a></li>
+                <h3><a href="">Selesai</a></h3>
             </div>
-            
         </div>
-
-        <hr>
-
-        
-
-        
-
-
-
-        <!-- <div class="values">
-            <div class="val-box">
-                <h3>
-                    Semua Laporan
-                </h3>
-            </div>
-
-            <div class="val-box">
-                <h3>
-                    Progres
-                </h3>
-            </div>
-
-            <div class="val-box">
-                <h3>
-                    Tertunda
-                </h3>
-            </div>
-
-            <div class="val-box">
-                <h3>
-                    Selesai
-                </h3>
-            </div>
-        </div> -->
 
         <div class="board">
             <table width="100%">
@@ -123,15 +88,15 @@
                <tbody>
                     <tr>
                         <td class="people">
-                            <!-- <img src="man1.jpg" alt=""> -->
+                            <!-- <img src="images\man1.jpg" alt=""> -->
                             <div class="people-de">
-                                <h5>Fadhly Al-farizi</h5>
+                                <h5>Kian Naila</h5>
                                 <!-- <p>kianizz@gmail.com</p> -->
                             </div>
                         </td>
 
                         <td class="people-des">
-                            <h5>Pinjam uang</h5>
+                            <h5>Perbaikan jalan</h5>
                         </td>
 
                         <td class="people-prov">

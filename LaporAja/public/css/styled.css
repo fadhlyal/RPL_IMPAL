@@ -145,6 +145,54 @@ body {
     /* margin-top: 70px; */
 }
 
+.uptask h3{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.uptask {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.uptask .uptaskspace{
+    margin-top: 30px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.uptask .uptaskspace a{
+    color: #000000;
+    text-decoration: none;
+}
+
+#interface .uptask a:hover,
+#interface .uptask a.active{
+    color: #A12520;
+}
+
+#interface .uptask a.active::after,
+#interface .uptask a:hover::after{
+    content: "";
+    width: 30%;
+    height: 5px;
+    background: #A12520;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+hr{
+    margin-top: 5px;
+    border: 1px solid #000000;
+    width: 1219px;
+}
+  
+
 .values {
     padding: 30px 30px 0 30px;
     display: flex;
@@ -223,8 +271,24 @@ tbody tr td {
     padding: 10px 15px;
 }
 
-.active p{
+.active .not{
+    background-color: red;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+.active .done{
     background-color: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+.active .prog{
+    background-color: #FFC107;
     padding: 2px 10px;
     display: inline-block;
     border-radius: 40px;
