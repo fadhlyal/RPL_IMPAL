@@ -48,6 +48,27 @@
                               </div>
                             </div>
 
+                            <div class="row g-3">
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <input type="provinsi" class="form-control" id="floatingInputGrid" name="provinsi" required>
+                                  <label for="floatingInputGrid">Provinsi</label>
+                                </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <input type="kabkota" class="form-control" id="floatingInputGrid" name="kabkota" required>
+                                  <label for="floatingInputGrid">Kab/Kota</label>
+                                </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <input type="kecamatan" class="form-control" id="floatingInputGrid" name="kecamatan" required>
+                                  <label for="floatingInputGrid">Kecamatan</label>
+                                </div>
+                              </div>
+                            </div>
+
                             <input type="text" class="form-control" id="hp" name="phonenumber" placeholder="Hp" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required>  
                             
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
