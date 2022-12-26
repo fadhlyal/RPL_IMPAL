@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css\styled.css">
+    <link rel="stylesheet" href="\css\styled.css">
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 </head>
@@ -22,7 +22,7 @@
 <body>
     <section id="menu">
         <div class="logo">
-            <a href="/dashboard"><img src="images\logo sidebar.png" alt=""></a>
+            <a href="/dashboard"><img src="\images\logo sidebar.png" alt=""></a>
         </div>
 
         <div class="items">
@@ -56,19 +56,19 @@
 
         <div class="uptask">
             <div class="uptaskspace">
-                <h3><a href="">Semua Laporan</a></h3>
+                <h3><a href="/profile">Semua Laporan</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="">Progres</a></h3>
+                <h3><a href="/profile/laporan-diproses">Progres</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a class="active" href="">Ditolak</a></h3>
+                <h3><a class="active" href="/profile/laporan-ditolak">Ditolak</a></h3>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="">Selesai</a></h3>
+                <h3><a href="/profile/laporan-selesai">Selesai</a></h3>
             </div>
         </div>
 
