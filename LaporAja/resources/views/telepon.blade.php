@@ -29,10 +29,14 @@
                 <li><a href="/laporan">Laporan</a></li>
                 <li><a href="/forum">Forum</a></li>
                 <li><a class="active" href="/kontakdarurat">Kontak</a></li>
-                <li>|</li>
                 @if (auth()->check())
+                    @if (Auth::user()->isAdmin())
+                        <li><a href="/profile">Tanggapi</a></li>
+                    @endif
+                    <li>|</li>
                     <li><a href="/profile"><i class="fa-solid fa-user"></i></a></li>
                 @else
+                    <li>|</li>
                     <li><a href="/login">Masuk</a></li>
                     <li><a href="/register">Daftar</a></li> 
                 @endif

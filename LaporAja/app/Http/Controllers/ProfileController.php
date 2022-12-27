@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\ApiFormatter;
-use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Laporan;
 
-class UserController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +24,37 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $laporan = Laporan::with('user')->where('user_id','=',auth()->id())->get();
+        return view('profile', [
+            'laporan' => $laporan
+        ]);
+    }
+
+    public function create_selesai()
+    {
+        $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
+            ->where('status','=','selesai')->get();
+        return view('dashboard-selesai', [
+            'laporan' => $laporan
+        ]);
+    }
+
+    public function create_ditolak()
+    {
+        $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
+            ->where('status','=','ditolak')->get();
+        return view('dashboard-ditolak', [
+            'laporan' => $laporan
+        ]);
+    }
+
+    public function create_progres()
+    {
+        $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
+            ->where('status','=','diproses')->get();
+        return view('dashboard-progres', [
+            'laporan' => $laporan
+        ]);
     }
 
     /**
@@ -37,33 +65,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $request->validate([
-                'firstname' => 'required',
-                'lastname' => 'required',
-                'phonenumber' => 'required',
-                'email' => 'required|email',
-                'password' => 'required',
-            ]);
-
-            $user = User::create([
-                'firstname' => $request->firstname,
-                'lastname' => $request->lastname,
-                'phonenumber' => $request->phonenumber,
-                'email' => $request->email,
-                'password' => $request->password,
-            ]);
-
-            $data = User::where('id','=',$user->id)->get();
-
-            if ($data) {
-                return ApiFormatter::createApi('200', 'Success', $data);
-            } else {
-                return ApiFormatter::createApi('400', 'Failed');
-            }
-        } catch (Exception $error) {
-            return ApiFormatter::createApi('400', 'Failed');
-        }
+        //
     }
 
     /**
@@ -109,12 +111,5 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function logout(Request $request)
-    {
-        auth()->logout();
-        $request->session()->flash('success', 'Anda telah log out');
-        return redirect()->to('/dashboard');
     }
 }

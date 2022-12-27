@@ -18,9 +18,13 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('phonenumber');
+            $table->string('provinsi');
+            $table->string('kabkota');
+            $table->string('kecamatan');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('role');
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

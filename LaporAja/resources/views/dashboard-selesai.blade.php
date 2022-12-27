@@ -86,92 +86,41 @@
                     </tr>
                </thead>
                <tbody>
-                    <tr>
-                        <td class="people">
-                            <!-- <img src="images\man1.jpg" alt=""> -->
-                            <div class="people-de">
-                                <h5>Kian Naila</h5>
-                                <!-- <p>kianizz@gmail.com</p> -->
-                            </div>
-                        </td>
+                @foreach($laporan as $key => $data)
+                        <tr>
+                            <td class="people">
+                                <!-- <img src="images\man1.jpg" alt=""> -->
+                                <div class="people-de">
+                                    <h5>{{$data->user->firstname}} {{$data->user->lastname}}</h5>
+                                    <!-- <p>kianizz@gmail.com</p> -->
+                                </div>
+                            </td>
 
-                        <td class="people-des">
-                            <h5>Perbaikan jalan</h5>
-                        </td>
+                            <td class="people-des">
+                                <h5>{{$data->judul}}</h5>
+                            </td>
 
-                        <td class="people-prov">
-                            <h5>Jawa Barat</h5>
-                        </td>
+                            <td class="people-prov">
+                                <h5>{{$data->provinsi}}</h5>
+                            </td>
 
-                        <td class="people-city">
-                            <h5>Kab. Bandung</h5>
-                        </td>
+                            <td class="people-city">
+                                <h5>{{$data->kabkota}}</h5>
+                            </td>
 
-                        <td class="people-kec">
-                            <h5>Bojongsoang</h5>
-                        </td>
-
-                        <td class="active"><p class="done">Selesai</p></td>
-                        <td class="edit"><a href="#">Edit</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="people">
-                            <!-- <img src="images\man1.jpg" alt=""> -->
-                            <div class="people-de">
-                                <h5>Kian Naila</h5>
-                                <!-- <p>kianizz@gmail.com</p> -->
-                            </div>
-                        </td>
-
-                        <td class="people-des">
-                            <h5>Perbaikan jalan</h5>
-                        </td>
-
-                        <td class="people-prov">
-                            <h5>Jawa Barat</h5>
-                        </td>
-
-                        <td class="people-city">
-                            <h5>Kab. Bandung</h5>
-                        </td>
-
-                        <td class="people-kec">
-                            <h5>Bojongsoang</h5>
-                        </td>
-
-                        <td class="active"><p class="done">Selesai</p></td>
-                        <td class="edit"><a href="#">Edit</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="people">
-                            <!-- <img src="images\man1.jpg" alt=""> -->
-                            <div class="people-de">
-                                <h5>Kian Naila</h5>
-                                <!-- <p>kianizz@gmail.com</p> -->
-                            </div>
-                        </td>
-
-                        <td class="people-des">
-                            <h5>Perbaikan jalan</h5>
-                        </td>
-
-                        <td class="people-prov">
-                            <h5>Jawa Barat</h5>
-                        </td>
-
-                        <td class="people-city">
-                            <h5>Kab. Bandung</h5>
-                        </td>
-
-                        <td class="people-kec">
-                            <h5>Bojongsoang</h5>
-                        </td>
-
-                        <td class="active"><p class="done">Selesai</p></td>
-                        <td class="edit"><a href="#">Edit</a></td>
-                    </tr>
+                            <td class="people-kec">
+                                <h5>{{$data->kecamatan}}</h5>
+                            </td>
+                            @if ($data->status == 'selesai')
+                                <td class="active"><p class="done">Selesai</p></td>
+                            @elseif ($data->status == 'ditolak')
+                                <td class="active"><p class="not">Ditolak</p></td>
+                            @else
+                                <td class="active"><p class="prog">Progres</p></td>
+                            @endif
+                            <td class="edit"><a href="#">Edit</a></td>
+                        </tr>
+                    @endforeach
                </tbody>
             </table>
         </div>

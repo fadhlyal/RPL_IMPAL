@@ -13,6 +13,7 @@ class Laporan extends Model
     protected $fillable = [
         'judul',
         'user_id',
+        'admin_id',
         'alamat',
         'provinsi',
         'kabkota',
@@ -24,6 +25,11 @@ class Laporan extends Model
     protected $hidden = [];
 
     public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function admin()
     {
         return $this->belongsTo(User::class);
     }

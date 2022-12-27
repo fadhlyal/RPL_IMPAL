@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('kontakpenting', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('admin_id')->constrained('admins');
+            $table->foreignId('admin_id')->constrained('users');
             $table->string('namainstansi');
             $table->string('nomortelepon');
             $table->string('alamat');

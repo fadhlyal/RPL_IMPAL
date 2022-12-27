@@ -19,4 +19,9 @@ class KontakPenting extends Model
     ];
 
     protected $hidden = [];
+
+    public function admin()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

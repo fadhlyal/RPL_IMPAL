@@ -22,6 +22,9 @@ class User extends Authenticatable
         'firstname',
         'lastname',
         'phonenumber',
+        'provinsi',
+        'kabkota',
+        'kecamatan',
         'email',
         'password',
     ];
@@ -42,6 +45,13 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
+    }
+
+    /**
+     * Check if this user is an admin
+     */
+    public function isAdmin() {
+        return ($this->role == 'admin');
     }
 
     /**

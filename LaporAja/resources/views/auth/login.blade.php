@@ -32,9 +32,9 @@
                         <div class="login-form">
                           <form method="POST" action="/login">
                             @csrf
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Kata sandi" required>
             
                             <div class="masuk">
                               <button style="cursor:pointer" type="submit" class="btn btn-outline-secondary border-">Masuk</button>

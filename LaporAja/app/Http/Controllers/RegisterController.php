@@ -41,6 +41,9 @@ class RegisterController extends Controller
                 'firstname' => 'required',
                 'lastname' => 'required',
                 'phonenumber' => 'numeric|required',
+                'provinsi' => 'required',
+                'kabkota' => 'required',
+                'kecamatan' => 'required',
                 'email' => 'required|unique:users,email',
                 'password' => 'min:8|required_with:confirmpassword',
                 'confirmpassword' => 'min:8|same:password'
@@ -50,8 +53,12 @@ class RegisterController extends Controller
                 'firstname' => $request->firstname,
                 'lastname' => $request->lastname,
                 'phonenumber' => $request->phonenumber,
+                'provinsi' => $request->provinsi,
+                'kabkota' => $request->kabkota,
+                'kecamatan' => $request->kecamatan,
                 'email' => $request->email,
                 'password' => $request->password,
+                'role' => 'user'
             ]);
 
             $data = User::where('id','=',$user->id)->get();

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('laporan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('admin_id')->nullable()->constrained('users');
             $table->string('judul');
             $table->string('alamat');
             $table->string('provinsi');

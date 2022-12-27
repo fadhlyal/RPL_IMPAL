@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,19 +29,19 @@ Route::group(['middleware' => ['guest']], function() {
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/laporan', [LaporanController::class, 'create'])->name('laporan');
     Route::post('/laporan', [LaporanController::class, 'store']);
+
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
-    Route::get('/profile', function() {
-        return view('profile');
-    })->name('profile');
-    Route::get('/profile/laporan-selesai', function() {
-        return view('dashboard-selesai');
-    })->name('dashboard-selesai');
-    Route::get('/profile/laporan-diproses', function() {
-        return view('dashboard-progres');
-    })->name('dashboard-progres');
-    Route::get('/profile/laporan-ditolak', function() {
-        return view('dashboard-ditolak');
-    })->name('dashboard-ditolak');
+    
+    Route::get('/profile',[ProfileController::class, 'create'])->name('profile');
+    Route::get('/profile/laporan-selesai',[ProfileController::class, 'create_selesai']);
+    Route::get('/profile/laporan-diproses',[ProfileController::class, 'create_progres']);
+    Route::get('/profile/laporan-ditolak',[ProfileController::class, 'create_ditolak']);
+});
+
+Route::group(['middleware' => ['admin']], function() {
+    Route::get('/admin', function() {
+        return view('welcome');
+    });
 });
 
 Route::get('/forum', [ForumController::class, 'create'])->name('forum');
