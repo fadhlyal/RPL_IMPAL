@@ -45,7 +45,7 @@
     <div class="container justify-content-center">
         <div class="forum">
             <div class="kiri">
-                @foreach($laporankiri as $key => $data)
+                @foreach($laporan[0] as $key => $data)
                     <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
                     <h3 class="jenis">{{$data->judul}}
                     @if ($data->status == 'selesai')
@@ -62,7 +62,7 @@
             </div>
 
             <div class="kanan">
-                @foreach($laporankanan as $key => $data)
+                @foreach($laporan[1] as $key => $data)
                     <h3 class="namauser">{{$data->user->firstname}} {{$data->user->lastname}}</h3>
                     <h3 class="jenis">{{$data->judul}}
                     @if ($data->status == 'selesai')

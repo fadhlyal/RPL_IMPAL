@@ -25,11 +25,10 @@ class ForumController extends Controller
      */
     public function create()
     {
-        $laporanganjil = Laporan::with('user')->whereRaw('id % 2 != 0')->get();
-        $laporangenap = Laporan::with('user')->whereRaw('id % 2 = 0')->get();
+        $laporan = Laporan::all();
+        $bagilaporan = $laporan->chunk(ceil($laporan->count() / 2));
         return view('forum', [
-            'laporankiri' => $laporanganjil,
-            'laporankanan' => $laporangenap
+            'laporan' => $bagilaporan
         ]);
     }
 
