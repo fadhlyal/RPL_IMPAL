@@ -27,6 +27,7 @@ class User extends Authenticatable
         'kecamatan',
         'email',
         'password',
+        'role'
     ];
 
     /**

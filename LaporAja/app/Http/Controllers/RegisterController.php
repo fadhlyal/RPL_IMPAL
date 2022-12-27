@@ -50,15 +50,15 @@ class RegisterController extends Controller
             ]);
 
             $user = User::create([
-                'firstname' => $request->firstname,
-                'lastname' => $request->lastname,
+                'firstname' => ucwords(strtolower($request->firstname)),
+                'lastname' => ucwords(strtolower($request->lastname)),
                 'phonenumber' => $request->phonenumber,
-                'provinsi' => $request->provinsi,
-                'kabkota' => $request->kabkota,
-                'kecamatan' => $request->kecamatan,
+                'provinsi' => ucwords(strtolower($request->provinsi)),
+                'kabkota' => ucwords(strtolower($request->kabkota)),
+                'kecamatan' => ucwords(strtolower($request->kecamatan)),
                 'email' => $request->email,
                 'password' => $request->password,
-                'role' => 'user'
+                'role' => "user"
             ]);
 
             $data = User::where('id','=',$user->id)->get();

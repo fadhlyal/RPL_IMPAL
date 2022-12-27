@@ -24,6 +24,12 @@ class ProfileController extends Controller
      */
     public function create()
     {
+        if (auth()->getUser()->isAdmin()) {
+            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)->get();
+            return view('profile', [
+                'laporan' => $laporan
+            ]);
+        }
         $laporan = Laporan::with('user')->where('user_id','=',auth()->id())->get();
         return view('profile', [
             'laporan' => $laporan
@@ -32,6 +38,13 @@ class ProfileController extends Controller
 
     public function create_selesai()
     {
+        if (auth()->getUser()->isAdmin()) {
+            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','selesai')->get();
+            return view('dashboard-selesai', [
+                'laporan' => $laporan
+            ]);
+        }
         $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
             ->where('status','=','selesai')->get();
         return view('dashboard-selesai', [
@@ -41,6 +54,13 @@ class ProfileController extends Controller
 
     public function create_ditolak()
     {
+        if (auth()->getUser()->isAdmin()) {
+            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','ditolak')->get();
+            return view('dashboard-ditolak', [
+                'laporan' => $laporan
+            ]);
+        }
         $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
             ->where('status','=','ditolak')->get();
         return view('dashboard-ditolak', [
@@ -50,6 +70,13 @@ class ProfileController extends Controller
 
     public function create_progres()
     {
+        if (auth()->getUser()->isAdmin()) {
+            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','diproses')->get();
+            return view('dashboard-progres', [
+                'laporan' => $laporan
+            ]);
+        }
         $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
             ->where('status','=','diproses')->get();
         return view('dashboard-progres', [
