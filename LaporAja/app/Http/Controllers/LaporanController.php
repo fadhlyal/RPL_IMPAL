@@ -46,12 +46,12 @@ class LaporanController extends Controller
         ]);
 
         $laporan = Laporan::create([
-            'judul' => $request->judul,
+            'judul' => ucwords(strtolower($request->judul)),
             'user_id' => auth()->id(),
             'alamat' => $request->alamat,
-            'provinsi' => $request->provinsi,
-            'kabkota' => $request->kabkota,
-            'kecamatan' => $request->kecamatan,
+            'provinsi' => ucwords(strtolower($request->provinsi)),
+            'kabkota' => ucwords(strtolower($request->kabkota)),
+            'kecamatan' => ucwords(strtolower($request->kecamatan)),
             'deskripsi' => $request->deskripsi,
             'status' => 'diproses',
         ]);

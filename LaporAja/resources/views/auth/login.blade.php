@@ -30,6 +30,7 @@
                         </div>       
         
                         <div class="login-form">
+                          @include('partial.alert')
                           <form method="POST" action="/login">
                             @csrf
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
@@ -42,7 +43,6 @@
 
                             <a href="/dashboard" class="text-decoration-none d-flex justify-content-center">Masuk Sebagai Guest</a>
                           </form>
-                          @include('partial.alert')
                         </div>
                     </div>
                 </div>
