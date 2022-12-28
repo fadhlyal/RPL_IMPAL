@@ -30,9 +30,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/laporan', [LaporanController::class, 'create'])->name('laporan');
     Route::post('/laporan', [LaporanController::class, 'store']);
 
-    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+    Route::get('/logout', [ProfileController::class, 'logout'])->name('logout');
     
     Route::get('/profile',[ProfileController::class, 'create'])->name('profile');
+    Route::delete('/profile/delete/{id}',[ProfileController::class, 'destroy'])->name('laporan.delete');
     Route::get('/profile/laporan-selesai',[ProfileController::class, 'create_selesai']);
     Route::get('/profile/laporan-diproses',[ProfileController::class, 'create_progres']);
     Route::get('/profile/laporan-ditolak',[ProfileController::class, 'create_ditolak']);

@@ -25,7 +25,9 @@ class ProfileController extends Controller
     public function create()
     {
         if (auth()->getUser()->isAdmin()) {
-            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)->get();
+            $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->orWhere('user_id','=',auth()->id())
+                ->get();
             return view('profile', [
                 'laporan' => $laporan
             ]);
@@ -40,7 +42,9 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
-                ->where('status','=','selesai')->get();
+                ->orWhere('user_id','=',auth()->id())
+                ->where('status','=','selesai')
+                ->get();
             return view('dashboard-selesai', [
                 'laporan' => $laporan
             ]);
@@ -56,13 +60,16 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
-                ->where('status','=','ditolak')->get();
+                ->orWhere('user_id','=',auth()->id())
+                ->where('status','=','ditolak')
+                ->get();
             return view('dashboard-ditolak', [
                 'laporan' => $laporan
             ]);
         }
         $laporan = Laporan::with('user')->where('user_id','=',auth()->id())
-            ->where('status','=','ditolak')->get();
+            ->where('status','=','ditolak')
+            ->get();
         return view('dashboard-ditolak', [
             'laporan' => $laporan
         ]);
@@ -72,7 +79,9 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
-                ->where('status','=','diproses')->get();
+                ->orWhere('user_id','=',auth()->id())    
+                ->where('status','=','diproses')
+                ->get();
             return view('dashboard-progres', [
                 'laporan' => $laporan
             ]);
@@ -137,6 +146,17 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $laporan = Laporan::where('id', $id)
+                    ->where('user_id',auth()->id())
+                    ->delete();
+        session()->flash('success', 'Laporan berhasil dihapus!');
+        return redirect()->back();
+    }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+        $request->session()->flash('success', 'Anda telah log out');
+        return redirect()->to('/dashboard');
     }
 }
