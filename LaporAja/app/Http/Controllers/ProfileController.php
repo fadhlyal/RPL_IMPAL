@@ -42,6 +42,7 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','ditolak')
                 ->orWhere('user_id','=',auth()->id())
                 ->where('status','=','selesai')
                 ->get();
@@ -60,6 +61,7 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','ditolak')
                 ->orWhere('user_id','=',auth()->id())
                 ->where('status','=','ditolak')
                 ->get();
@@ -79,6 +81,7 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
+                ->where('status','=','diproses')
                 ->orWhere('user_id','=',auth()->id())    
                 ->where('status','=','diproses')
                 ->get();

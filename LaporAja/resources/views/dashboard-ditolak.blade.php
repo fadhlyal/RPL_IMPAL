@@ -119,7 +119,22 @@
                             <td class="active"><p class="prog">Progres</p></td>
                         @endif
                         @if (Auth::user()->isAdmin())
+                            @if ($data->user_id==auth()->id())
+                            <td class="edit">
+                                <a href="{{ route('profile') }}" 
+                                    onclick="event.preventDefault();
+                                    document.getElementById(
+                                    'delete-form-{{$data->id}}').submit();">
+                                    Delete
+                                </a>
+                            </td>
+                            <form id="delete-form-{{$data->id}}" action="{{route('laporan.delete', $data->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                            @else
                             <td class="edit"><a href="#">Edit</a></td>
+                            @endif
                         @else
                         <td class="edit">
                             <a href="{{ route('profile') }}" 
