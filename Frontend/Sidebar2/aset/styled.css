@@ -48,6 +48,8 @@ body {
     cursor: pointer;
 }
 
+
+
 #menu .items li:nth-child(2){ /*Garis paling kri sidebar*/
     border-left: 4px solid #ffff;
 }
@@ -298,7 +300,14 @@ tbody tr td {
 .edit a{
     text-decoration: none;
     font-size: 14px;
-    color: #554cd1;
+    color: #0a009c;
+    font-weight: 600;
+}
+
+.delete a{
+    text-decoration: none;
+    font-size: 14px;
+    color: red;
     font-weight: 600;
 }
 
@@ -383,3 +392,24 @@ tbody tr td {
         margin: 30px 15px 30px 15px;
     }
 }
+
+/*fotrm edit*/
+#interface .radio{
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+#interface .form-check{
+    padding-bottom: 10px;
+}
+
+#interface .btn{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.text {
+    padding-left: 30px;
+    width: 25%;
+}
+
