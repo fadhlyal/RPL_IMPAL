@@ -121,21 +121,14 @@
                         <td class="edit"><a href="#">Edit</a></td>
                     </tr>
                 @endforeach
-
                </tbody>
             </table>
         </div>
-
-        
-
     </section>
-
-    <script>
+    <!-- <script>
         $('#menu-btn').click(function() {
             $('#menu').toggleClass("active");
         })
-    </script>
-
-
+    </script> -->
 </body>
 </html>

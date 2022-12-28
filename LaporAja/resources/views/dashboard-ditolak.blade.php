@@ -125,13 +125,11 @@
             </table>
         </div>
     </section>
-
+<!-- 
     <script>
         $('#menu-btn').click(function() {
             $('#menu').toggleClass("active");
         })
-    </script>
-
-
+    </script> -->
 </body>
 </html>
