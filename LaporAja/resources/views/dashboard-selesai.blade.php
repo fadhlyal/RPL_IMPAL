@@ -123,7 +123,7 @@
                                 <td class="active"><p class="prog">Progres</p></td>
                             @endif
                             @if (Auth::user()->isAdmin())
-                                <td class="edit"><a href="/dashboard/edit">Edit</a></td>
+                                <td class="edit"><a href="/dashboard/edit/{{$data->id}}">Edit</a></td>
                             @endif
                             <td class="delete"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</a></td>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -138,7 +138,11 @@
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                    <form id="delete-form-{{$data->id}}" action="{{route('laporan.delete', $data->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
                                     </div>
                                 </div>
                                 </div>

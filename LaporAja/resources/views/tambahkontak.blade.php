@@ -52,12 +52,13 @@
 
       <main class="px-3">
         <!-- <h1 class="text">Tulis laporan kamu disini!</h1> -->
-        
-        <form class="row g-3">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Rumah Sakit</option>
-                <option value="1">Polisi</option>
-                <option value="2">Pemadam Kebakaran</option>
+        @include('partial.alert')
+        <form method="POST" action="/kontakdarurat/tambah" class="row g-3">
+            @csrf
+            <select class="form-select" aria-label="Default select example" name="jenisinstansi">
+                <option value="Rumah Sakit"selected>Rumah Sakit</option>
+                <option value="Kantor Polisi">Polisi</option>
+                <option value="Kantor Pemadam">Pemadam Kebakaran</option>
             </select>
 
             <!-- <div class="col-12">
@@ -65,14 +66,14 @@
             </div> -->
 
             <div class="col-12">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Nama Instansi">
+                <input type="text" class="form-control" id="inputAddress" name="namainstansi" placeholder="Nama Instansi" required>
             </div>
 
             <div class="col-12">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Nomor">
+                <input type="text" class="form-control" id="inputAddress" name="nomortelepon" placeholder="Nomor" required>
             </div>
             <div class="col-12">
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Alamat">
+                <input type="text" class="form-control" id="inputAddress2" name="alamat" placeholder="Alamat" required>
             </div>
 
             <section id="but">

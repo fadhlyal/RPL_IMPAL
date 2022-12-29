@@ -35,6 +35,11 @@ class KontakController extends Controller
         ]);
     }
 
+    public function add()
+    {
+        return view('tambahkontak');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -43,7 +48,31 @@ class KontakController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'jenisinstansi' => 'required',
+            'namainstansi' => 'required',
+            'nomortelepon' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $kontak = KontakPenting::create([
+            'admin_id' => auth()->id(),
+            'jenisinstansi' => $request->jenisinstansi,
+            'namainstansi' => $request->namainstansi,
+            'nomortelepon' => $request->nomortelepon,
+            'alamat' => $request->alamat
+        ]);
+
+        $data = KontakPenting::where('id','=',$kontak->id)->get();
+
+        if ($data) {
+            $request->session()->flash('success', 'Kontak penting berhasil ditambahkan!');
+            return redirect()->to('/kontakdarurat/tambah');
+        } else {
+            return back()->withErrors([
+                'message' => 'Terdapat kesalahan'
+            ]);
+        }
     }
 
     /**

@@ -33,27 +33,23 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/logout', [ProfileController::class, 'logout'])->name('logout');
     
     Route::get('/profile',[ProfileController::class, 'create'])->name('profile');
-    Route::delete('/profile/delete/{id}',[ProfileController::class, 'destroy'])->name('laporan.delete');
     Route::get('/profile/laporan-selesai',[ProfileController::class, 'create_selesai']);
     Route::get('/profile/laporan-diproses',[ProfileController::class, 'create_progres']);
     Route::get('/profile/laporan-ditolak',[ProfileController::class, 'create_ditolak']);
-    Route::get('/dashboard/edit', function() {
-        return view('edit');
-    })->name('edit');
+    Route::delete('/profile/delete/{id}',[ProfileController::class, 'destroy'])->name('laporan.delete');
 });
 
 Route::group(['middleware' => ['admin']], function() {
-    Route::get('/admin', function() {
-        return view('welcome');
-    });
+    Route::get('/kontakdarurat/tambah',[KontakController::class, 'add'])->name('tambahkontak');
+    Route::post('/kontakdarurat/tambah',[KontakController::class, 'store']);
+
+    Route::get('/dashboard/edit/{id}', [ProfileController::class, 'edit'])->name('edit');
+    Route::post('/dashboard/edit/update/{id}', [ProfileController::class, 'update'])->name('laporan.update');;
 });
 
 Route::get('/forum', [ForumController::class, 'create'])->name('forum');
 
 Route::get('/kontakdarurat', [KontakController::class, 'create'])->name('kontak');
-Route::get('/kontakdarurat/tambah', function() {
-    return view('tambahkontak');
-})->name('tambahkontak');
 
 Route::get('/dashboard', function() {
     return view('landingpage');

@@ -38,32 +38,47 @@
         <h3 class="i-name">
             Tanggapan
         </h3>
-
-        <div class="radio">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Diproses
-                </label>
-              </div>
+        <form method="POST" action="{{route('laporan.update', $laporan->id)}}">
+          @csrf
+          <div class="radio">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Ditolak
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Selesai
-                </label>
-              </div>
-        </div>
+                  @if ($laporan->status=='diproses')
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="diproses" checked>
+                  @else
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="diproses">
+                  @endif
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Diproses
+                  </label>
+                </div>
+                <div class="form-check">
+                  @if ($laporan->status=='ditolak')
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="ditolak" checked>
+                  @else
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="ditolak">
+                  @endif
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Ditolak
+                  </label>
+                </div>
+                <div class="form-check">
+                  @if ($laporan->status=='selesai')
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault3" value="selesai" checked>
+                  @else
+                    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault3" value="selesai">
+                  @endif
+                  <label class="form-check-label" for="flexRadioDefault3">
+                    Selesai
+                  </label>
+                </div>
+          </div>
+        
 
-        <!-- <div class="text">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Jenis Instansi">
-        </div> -->
-        <button type="button" class="btn btn-outline-primary">Simpan</button>         
+          <!-- <div class="text">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Jenis Instansi">
+          </div> -->
+          <button type="submit" class="btn btn-outline-primary">Simpan</button>
+        </form>       
     </section>
 </body>
 

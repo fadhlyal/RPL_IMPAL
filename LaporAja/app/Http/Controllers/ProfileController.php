@@ -126,7 +126,10 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $laporan = Laporan::find($id);
+        return view('edit', [
+            'laporan' => $laporan
+        ]);
     }
 
     /**
@@ -138,7 +141,13 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $laporan = Laporan::find($id);
+        $laporan->admin_id = auth()->id();
+        $laporan->status = $request->status;
+        $laporan->save();
+
+        session()->flash('success', 'Laporan berhasil ditanggapi!');
+        return redirect()->route('profile');
     }
 
     /**
@@ -149,9 +158,14 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        $laporan = Laporan::where('id', $id)
+        if (auth()->getUser()->isAdmin()) {
+            $laporan = Laporan::where('id', $id)
+                    ->delete();
+        } else {
+            $laporan = Laporan::where('id', $id)
                     ->where('user_id',auth()->id())
                     ->delete();
+        }
         session()->flash('success', 'Laporan berhasil dihapus!');
         return redirect()->back();
     }

@@ -44,7 +44,7 @@ class RegisterController extends Controller
                 'provinsi' => 'required',
                 'kabkota' => 'required',
                 'kecamatan' => 'required',
-                'email' => 'required|unique:users,email',
+                'email' => 'required|unique:users,email|email:rfc,dns',
                 'password' => 'min:8|required_with:confirmpassword',
                 'confirmpassword' => 'min:8|same:password'
             ]);
