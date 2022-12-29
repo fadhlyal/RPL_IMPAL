@@ -48,6 +48,9 @@ Route::group(['middleware' => ['admin']], function() {
 Route::get('/forum', [ForumController::class, 'create'])->name('forum');
 
 Route::get('/kontakdarurat', [KontakController::class, 'create'])->name('kontak');
+Route::get('/kontakdarurat/tambah', function() {
+    return view('tambahkontak');
+})->name('tambahkontak');
 
 Route::get('/dashboard', function() {
     return view('landingpage');

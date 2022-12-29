@@ -177,3 +177,8 @@
     width: 60px; /* Menetapkan lebar elemen "but" sebesar 50% */
     margin: auto; /* Menempatkan elemen "but" di tengah */
 }
+
+.px-3 .form-select {
+    margin-bottom: 18px;
+    color: #837E7E;
+}

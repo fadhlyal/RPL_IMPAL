@@ -175,7 +175,11 @@ h4{
 #daftar .col {    
     background: #ffffff;
     border: 1px solid #333;
-    padding: 0px 15px;
+    width: 298px;
+    height: 50px;
+    left: 182px;
+    top: 150px;
+    /* padding: 0px 15px;*/
     margin: 6px 50px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
     border-radius: 20px;
@@ -188,7 +192,7 @@ h4{
 }
 
 #daftar .col li{
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 #daftar .col a{
@@ -200,6 +204,32 @@ h4{
 #daftar .col li a i{
     padding-right: 10px;
 }
+
+/* Tombol tmbah nomer penting*/
+#main .col li{
+    padding-top: 30px;
+    list-style: none;
+    justify-content: center;
+}
+
+#main .col a{
+    text-decoration: none;
+    color: red;
+}
+
+#main .col i{
+    color: red;
+    padding-right: 5px;
+}
+
+#main .plus{
+    padding-top: 50px;
+    width: 50%; /* Menetapkan lebar elemen "col" sebesar 50% */
+    margin: auto; /* Menempatkan elemen "col" di tengah */
+}
+
+
+/*sampe sini*/
 
 #main .col i{
     color: red;

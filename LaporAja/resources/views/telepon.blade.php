@@ -99,5 +99,12 @@
                 </div>
             </div>
         </div>
+        @if (auth()->check())
+            @if (Auth::user()->isAdmin())
+                <div class="plus col">
+                    <li><a href="/kontakdarurat/tambah"><i class="fa-solid fa-plus"></i>Tambah Nomer Penting</a></li>
+                </div>
+            @endif
+        @endif
     </section>
 </body>
