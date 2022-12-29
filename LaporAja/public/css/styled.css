@@ -145,7 +145,7 @@ body {
     /* margin-top: 70px; */
 }
 
-.uptask h3{
+.uptask h4{
     list-style: none;
     padding: 0 20px;
     position: relative;
@@ -162,7 +162,7 @@ body {
 .uptask .uptaskspace{
     margin-top: 30px;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .uptask .uptaskspace a{
@@ -243,11 +243,14 @@ hr{
     color: #787d8d;
 }
 
-.board .people {
+.board .tbody,
+.board .edit,
+.board .delete {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: start;
+    display: inline-block;
 }
 
 table {
@@ -298,7 +301,14 @@ tbody tr td {
 .edit a{
     text-decoration: none;
     font-size: 14px;
-    color: #554cd1;
+    color: #0a009c;
+    font-weight: 600;
+}
+
+.delete a{
+    text-decoration: none;
+    font-size: 14px;
+    color: red;
     font-weight: 600;
 }
 
@@ -382,4 +392,24 @@ tbody tr td {
     .board {
         margin: 30px 15px 30px 15px;
     }
+}
+
+/*fotrm edit*/
+#interface .radio{
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+#interface .form-check{
+    padding-bottom: 10px;
+}
+
+#interface .btn{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.text {
+    padding-left: 30px;
+    width: 25%;
 }

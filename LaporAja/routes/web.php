@@ -37,6 +37,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/profile/laporan-selesai',[ProfileController::class, 'create_selesai']);
     Route::get('/profile/laporan-diproses',[ProfileController::class, 'create_progres']);
     Route::get('/profile/laporan-ditolak',[ProfileController::class, 'create_ditolak']);
+    Route::get('/dashboard/edit', function() {
+        return view('edit');
+    })->name('edit');
 });
 
 Route::group(['middleware' => ['admin']], function() {

@@ -16,7 +16,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="\css\styled.css">
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 </head>
@@ -24,13 +24,13 @@
 <body>
     <section id="menu">
         <div class="logo">
-            <img src="logo sidebar.png" alt="">
+            <a href="/dashboard"><img src="\images\logo sidebar.png" alt=""></a>
         </div>
 
         <div class="items">
-            <li><i class="fa-solid fa-circle-user"></i><a href="#">Profile</a></li>
-            <li><i class="fa-solid fa-clipboard-list"></i><a href="#">Laporan</a></li>
-            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Keluar</a></li>
+            <!-- <li><i class="fa-solid fa-circle-user"></i><a href="#">Profile</a></li> -->
+            <li><i class="fa-solid fa-clipboard-list"></i><a href="/profile">Laporan</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="/logout">Keluar</a></li>
         </div>
     </section>
 
@@ -63,14 +63,8 @@
         <!-- <div class="text">
                 <input type="text" class="form-control" id="inputAddress" placeholder="Jenis Instansi">
         </div> -->
-        <button type="button" class="btn btn-outline-primary">Simpan</button>
-          
-                   
+        <button type="button" class="btn btn-outline-primary">Simpan</button>         
     </section>
-    
-    
-
-    
 </body>
 
     

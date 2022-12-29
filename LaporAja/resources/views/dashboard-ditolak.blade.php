@@ -14,6 +14,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="\css\styled.css">
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
@@ -27,7 +31,7 @@
 
         <div class="items">
             <!-- <li><i class="fa-solid fa-circle-user"></i><a href="/profile">Profile</a></li> -->
-            <li><i class="fa-solid fa-clipboard-list"></i><a href="">Laporan</a></li>
+            <li><i class="fa-solid fa-clipboard-list"></i><a href="/profile">Laporan</a></li>
             <li><i class="fa-solid fa-right-from-bracket"></i><a href="/logout">Keluar</a></li>
         </div>
     </section>
@@ -56,19 +60,19 @@
 
         <div class="uptask">
             <div class="uptaskspace">
-                <h3><a href="/profile">Semua Laporan</a></h3>
+                <h4><a href="/profile"><small><b>Semua Laporan</b></small></a></h4>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="/profile/laporan-diproses">Progres</a></h3>
+                <h4><a href="/profile/laporan-diproses"><small><b>Progres</b></small></a></h4>
             </div>
 
             <div class="uptaskspace">
-                <h3><a class="active" href="/profile/laporan-ditolak">Ditolak</a></h3>
+                <h4><a class="active" href="/profile/laporan-ditolak"><small><b>Ditolak</b></small></a></h4>
             </div>
 
             <div class="uptaskspace">
-                <h3><a href="/profile/laporan-selesai">Selesai</a></h3>
+                <h4><a href="/profile/laporan-selesai"><small><b>Selesai</b></small></a></h4>
             </div>
         </div>
 
@@ -115,10 +119,31 @@
                             <td class="active"><p class="done">Selesai</p></td>
                         @elseif ($data->status == 'ditolak')
                             <td class="active"><p class="not">Ditolak</p></td>
-                        @else
+                        @elseif ($data->status == 'diproses')
                             <td class="active"><p class="prog">Progres</p></td>
                         @endif
                         @if (Auth::user()->isAdmin())
+                            <td class="edit"><a href="/dashboard/edit">Edit</a></td>
+                        @endif
+                        <td class="delete"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</a></td>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Laporan</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  Apakah anda yakin akan menghapus laporan ini?
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                  <button type="button" class="btn btn-danger">Hapus</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- @if (Auth::user()->isAdmin())
                             @if ($data->user_id==auth()->id())
                             <td class="edit">
                                 <a href="{{ route('profile') }}" 
@@ -148,7 +173,7 @@
                             @csrf
                             @method('DELETE')
                         </form>
-                        @endif
+                        @endif -->
                     </tr>
                 @endforeach
                </tbody>
