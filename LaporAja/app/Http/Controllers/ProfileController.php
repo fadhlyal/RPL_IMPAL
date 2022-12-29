@@ -42,7 +42,7 @@ class ProfileController extends Controller
     {
         if (auth()->getUser()->isAdmin()) {
             $laporan = Laporan::with('user')->where('provinsi','=',auth()->getUser()->provinsi)
-                ->where('status','=','ditolak')
+                ->where('status','=','selesai')
                 ->orWhere('user_id','=',auth()->id())
                 ->where('status','=','selesai')
                 ->get();

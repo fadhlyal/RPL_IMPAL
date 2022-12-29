@@ -57,10 +57,10 @@ class KontakController extends Controller
 
         $kontak = KontakPenting::create([
             'admin_id' => auth()->id(),
-            'jenisinstansi' => $request->jenisinstansi,
-            'namainstansi' => $request->namainstansi,
+            'jenisinstansi' => ucwords(strtolower($request->jenisinstansi)),
+            'namainstansi' => ucwords(strtolower($request->namainstansi)),
             'nomortelepon' => $request->nomortelepon,
-            'alamat' => $request->alamat
+            'alamat' => ucwords(strtolower($request->alamat))
         ]);
 
         $data = KontakPenting::where('id','=',$kontak->id)->get();
