@@ -72,8 +72,10 @@
             <div class="row">
                 <div class="col">
                     @foreach($rumahsakit as $key => $data)
-                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h4>{{$data->namainstansi}}</h4>
+                        <!-- <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4> -->
                         <h7>{{$data->alamat}}</h7>
+                        <h7>{{$data->nomortelepon}}</h7>
                         <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
                         <h6>{{$data->nomortelepon}}</h6> -->
@@ -81,8 +83,9 @@
                 </div>
                 <div class="col">
                     @foreach($polisi as $key => $data)
-                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h4>{{$data->namainstansi}}</h4>
                         <h7>{{$data->alamat}}</h7>
+                        <h7>{{$data->nomortelepon}}</h7>
                         <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
                         <h6>{{$data->nomortelepon}}</h6> -->
@@ -90,8 +93,9 @@
                 </div>
                 <div class="col">
                     @foreach($pemadam as $key => $data)
-                        <h4>{{$data->namainstansi}}<i class="fa-solid fa-play"></i></h4>
+                        <h4>{{$data->namainstansi}}</h4>
                         <h7>{{$data->alamat}}</h7>
+                        <h7>{{$data->nomortelepon}}</h7>
                         <!-- <h4><strong>{{$data->namainstansi}}</strong></h4>
                         <h6>{{$data->alamat}}</h6>
                         <h6>{{$data->nomortelepon}}</h6> -->

@@ -81,6 +81,10 @@ body {
     position: relative;
 }
 
+#interface .col-6 {
+    padding-bottom: 20px;
+}
+
 #interface .navigation {
     display: flex;
     align-items: center;
@@ -137,12 +141,17 @@ body {
 
 }
 
-.i-name {
+.i-name,
+.info {
     color: #000000;
     padding: 30px 30px 0 30px;
     font-size: 24px;
     font-weight: 700;
     /* margin-top: 70px; */
+}
+
+#interface h4 {
+    font-size: 22px;
 }
 
 .uptask h4{
@@ -396,7 +405,7 @@ tbody tr td {
 
 /*fotrm edit*/
 #interface .radio{
-    margin-top: 80px;
+    margin-top: 20px;
     margin-left: 30px;
 }
 

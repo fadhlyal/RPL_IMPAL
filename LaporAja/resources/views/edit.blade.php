@@ -38,9 +38,40 @@
         <h3 class="i-name">
             Tanggapan
         </h3>
+        <div class="info">
+            <h4><b>Judul</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->judul}}" disabled>
+            </div>   
+            <h4><b>Alamat</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->alamat}}" disabled>
+            </div>
+            <h4><b>Provinsi</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->provinsi}}" disabled>
+            </div>
+            <h4><b>Kab/Kota</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->kabkota}}" disabled>
+            </div>
+            <h4><b>Kecamatan</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->kecamatan}}" disabled>
+            </div>
+            <h4><b>Deskripsi</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{$laporan->deskripsi}}" disabled>
+            </div>
+            <h4><b>Status Saat Ini</b></h4>
+            <div class="col-6">
+              <input type="text" class="form-control" id="inputAddress" value="{{ ucwords($laporan->status) }}" disabled>
+            </div>
+        </div>
         <form method="POST" action="{{route('laporan.update', $laporan->id)}}">
           @csrf
           <div class="radio">
+              <h4><b>Ubah Status</b></h4>
               <div class="form-check">
                   @if ($laporan->status=='diproses')
                     <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="diproses" checked>
